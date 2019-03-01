@@ -120,7 +120,7 @@ function actionHandler(args, watsonResponse) {
       case "addMoreActionsHere":
           return resolve(watsonResponse);
       */
-	case 'startSkill':
+	case 'cloud homework':
 	return resolve(watsonResponse);
 	
       default:
