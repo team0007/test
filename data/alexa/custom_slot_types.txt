@@ -1,5 +1,0 @@
-name:
-BAG_OF_WORDS
-
-values:
-Hello World
