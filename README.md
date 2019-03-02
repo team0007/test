@@ -1,2 +1,2 @@
-# Homewoek 2: Integrating Watson assistant with Alexa
+# Homework 2: Integrating Watson assistant with Alexa
 testing
