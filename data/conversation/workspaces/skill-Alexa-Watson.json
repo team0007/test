@@ -2,19 +2,19 @@
   "name": "Alexa-Watson",
   "intents": [
     {
-      "intent": "class_teacher",
+      "intent": "start",
       "examples": [
         {
-          "text": "who is the class teacher"
+          "text": "Start Skill"
         }
       ],
       "description": ""
     },
     {
-      "intent": "start",
+      "intent": "class_teacher",
       "examples": [
         {
-          "text": "Start Skill"
+          "text": "who is the class teacher"
         }
       ],
       "description": ""
@@ -48,6 +48,26 @@
   },
   "description": "",
   "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "node_4_1551499907058"
+    },
     {
       "type": "standard",
       "title": "class teacher",
@@ -116,26 +136,6 @@
       "conditions": "#team_members",
       "dialog_node": "node_2_1551496786189",
       "previous_sibling": "node_1_1551496495428"
-    },
-    {
-      "type": "standard",
-      "title": "Welcome",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Hello"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "metadata": {},
-      "conditions": "welcome",
-      "dialog_node": "node_4_1551499907058"
     }
   ],
   "workspace_id": "1dd71f5e-4179-43ea-a16e-3766c37d6e2b",
