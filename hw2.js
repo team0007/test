@@ -120,7 +120,7 @@ function actionHandler(args, watsonResponse) {
       case "addMoreActionsHere":
           return resolve(watsonResponse);
       */
-	case 'StartSkill':
+	case 'teacher':
 	return resolve(watsonResponse);
 	
       default:
