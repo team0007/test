@@ -1,0 +1,150 @@
+{
+  "name": "Alexa-Watson",
+  "intents": [
+    {
+      "intent": "class_teacher",
+      "examples": [
+        {
+          "text": "who is the class teacher"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "start",
+      "examples": [
+        {
+          "text": "Start Skill"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "team_members",
+      "examples": [
+        {
+          "text": "list members of team seven"
+        },
+        {
+          "text": "list team seven mebers"
+        },
+        {
+          "text": "who is on team seven"
+        },
+        {
+          "text": "team seven members"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "class teacher",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rodrigo Sardinas"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#class_teacher",
+      "dialog_node": "node_1_1551496495428",
+      "previous_sibling": "node_4_1551499907058"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_2_1551496786189"
+    },
+    {
+      "type": "standard",
+      "title": "team members",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Akolade, Jeawon, chase and john"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#team_members",
+      "dialog_node": "node_2_1551496786189",
+      "previous_sibling": "node_1_1551496495428"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome to Team 7! how can i help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#start",
+      "dialog_node": "node_4_1551499907058"
+    }
+  ],
+  "workspace_id": "1dd71f5e-4179-43ea-a16e-3766c37d6e2b",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
