@@ -2,10 +2,43 @@
   "name": "Alexa-Watson",
   "intents": [
     {
+      "intent": "clustering",
+      "examples": [
+        {
+          "text": "Define clustering."
+        },
+        {
+          "text": "What is the definition of clustering?"
+        },
+        {
+          "text": "What is clustering?"
+        },
+        {
+          "text": "How is clustering different that grid computing?"
+        }
+      ],
+      "description": ""
+    },
+    {
       "intent": "class_teacher",
       "examples": [
         {
           "text": "who is the class teacher"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "definition",
+      "examples": [
+        {
+          "text": "What is the definition of cloud computing?"
+        },
+        {
+          "text": "Define cloud computing."
+        },
+        {
+          "text": "What is cloud computing?"
         }
       ],
       "description": ""
@@ -50,6 +83,27 @@
   "dialog_nodes": [
     {
       "type": "standard",
+      "title": "clustering",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Clustering is a collection of independent IT resources that work as a single entity with individual components that are similar or identical using some type of strong synchronization."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#clustering",
+      "dialog_node": "node_2_1551726431255",
+      "previous_sibling": "node_1_1551726099986"
+    },
+    {
+      "type": "standard",
       "title": "class teacher",
       "output": {
         "generic": [
@@ -68,6 +122,48 @@
       "conditions": "#class_teacher",
       "dialog_node": "node_1_1551496495428",
       "previous_sibling": "node_4_1551499907058"
+    },
+    {
+      "type": "standard",
+      "title": "definition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A specialized form of distributed computing that introduces utilization models for remotely provisioning scalable and measured resources."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#definition",
+      "dialog_node": "node_1_1551726099986",
+      "previous_sibling": "node_2_1551496786189"
+    },
+    {
+      "type": "standard",
+      "title": "team members",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Akolade, Jeawon, chase and john"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#team_members",
+      "dialog_node": "node_2_1551496786189",
+      "previous_sibling": "node_1_1551496495428"
     },
     {
       "type": "standard",
@@ -94,28 +190,7 @@
       "metadata": {},
       "conditions": "anything_else",
       "dialog_node": "Anything else",
-      "previous_sibling": "node_2_1551496786189"
-    },
-    {
-      "type": "standard",
-      "title": "team members",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Akolade, Jeawon, chase and john"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "metadata": {},
-      "conditions": "#team_members",
-      "dialog_node": "node_2_1551496786189",
-      "previous_sibling": "node_1_1551496495428"
+      "previous_sibling": "node_2_1551726431255"
     },
     {
       "type": "standard",
